@@ -1,1 +1,1 @@
-# Paxos Trader
+# React app using Paxos API
