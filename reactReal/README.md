@@ -1,1 +1,1 @@
-# React app using API for aynsc calls
+# React app using API for async calls
