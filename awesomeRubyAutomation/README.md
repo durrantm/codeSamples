@@ -1,6 +1,8 @@
+## Ruby automation using Rspec
+
 Instructions to test:
 
-1) First add these three environment variables (windows button + s -> environment variables). (request key values from SIT-SDET team)
+1) First add these three environment variables (windows button + s -> environment variables)
 
 AWS_REGION: us-east-2
 
