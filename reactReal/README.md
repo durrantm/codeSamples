@@ -1,1 +1,1 @@
-# React app using Paxos API
+# React app using API for aynsc calls
