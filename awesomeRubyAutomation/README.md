@@ -1,6 +1,6 @@
 ## Ruby automation using Rspec
 
-Instructions to test:
+Instructions for Dyanmo DB setup:
 
 1) First add these three environment variables (windows button + s -> environment variables)
 
