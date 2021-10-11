@@ -33,14 +33,14 @@ browser_caps:
 
 Application URLs: Please set these pairs as environment variables.
 
-atlas_office_url: https://t00242:Redcar%232@portal.atlas-sprint.internal.slmbank.net/
+atlas_office_url: t00242:Redcar%232@portal.atlas-sprint.internal.slmbank.net/
 
-activity_center_base_url: https://qa.salliemae.com
+activity_center_base_url: qa.salliemae.com
 
-ola_base_url: https://opennetwld-qa3.salliemae.com/W2WPortal
+ola_base_url: opennetwld-qa3.salliemae.com/W2WPortal
 
-ols_base_url: https://preview.salliemae.com
+ols_base_url: preview.salliemae.com
 
-onwld_base_url: https://opennetwld-qa3.salliemae.com
+onwld_base_url: opennetwld-qa3.salliemae.com
 
-account_settings_url: https://temp-activitycenter-sprint.salliemae.com/AccountSettings/Show
+account_settings_url: temp-activitycenter-sprint.salliemae.com/AccountSettings/Show
