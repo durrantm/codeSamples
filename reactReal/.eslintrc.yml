@@ -1,0 +1,97 @@
+root: true
+settings:
+  react:
+    version: latest
+env:
+  commonjs: true
+  es6: true
+  node: true
+  jest/globals: true
+  browser: true
+ignorePatterns:
+  - build/
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:jest/recommended
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  document:
+  localStorage:
+  history:
+  preventDefault:
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+plugins:
+  - react
+  - jest
+rules:
+  indent:
+    - error
+    - 2
+  max-len:
+    - error
+    - code: 120
+  keyword-spacing: error
+  quotes:
+    - error
+    - single 
+  jsx-quotes:
+    - error
+    - prefer-double
+  prefer-const: error
+  eqeqeq: error
+  semi: error
+  no-var: error
+  no-new: error
+  vars-on-top: error
+  default-param-last: error
+  no-tabs: error
+  no-trailing-spaces: error
+  no-nested-ternary: error
+  no-multiple-empty-lines: error
+  no-use-before-define: error
+  no-extra-parens: error
+  default-case: error
+  no-else-return: error
+  no-eq-null: error
+  no-eval: error
+  no-loop-func: error
+  no-native-reassign: error
+  no-param-reassign: error
+  no-self-compare: error
+  prefer-template: error
+  comma-spacing: error
+  no-multi-spaces: error
+  space-in-parens:
+    - error
+    - never
+  array-bracket-spacing:
+    - error
+    - never
+  no-await-in-loop: error
+  accessor-pairs: error
+  grouped-accessor-pairs: error
+  block-scoped-var: error
+  no-implicit-coercion: error
+  no-invalid-this: error
+  react/jsx-filename-extension: [1, { "extensions": [".tsx", ".ts", ".js", ".jsx"] }]
+  react/jsx-pascal-case: error
+  react/jsx-closing-bracket-location: error
+  react/jsx-closing-tag-location: error
+  react/jsx-tag-spacing: error
+  react/jsx-curly-spacing: error
+  react/jsx-boolean-value: error
+  react/jsx-wrap-multilines: error
+  react/self-closing-comp: error
+  react/forbid-prop-types: error
+  react/forbid-foreign-prop-types: error
+  react/no-access-state-in-setstate: error
+  react/no-array-index-key: error
+  react/no-did-update-set-state: error
+  react/no-direct-mutation-state: error
+  react/prefer-stateless-function: error
+  react/react-in-jsx-scope: 0
+  #react/jsx-no-bind: error

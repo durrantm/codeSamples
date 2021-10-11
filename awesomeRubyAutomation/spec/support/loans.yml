@@ -1,0 +1,31 @@
+loan_type:
+  bar_study: 'bar_study_loan'
+  career_training: 'career_training_loan'
+  dental_school: 'dental_school_loan'
+  dental_residency_and_relocation: 'dental_residency_and_relocation_loan'
+  health_graduate: 'health_graduate_smart_loan'
+  k12: 'k12_loan'
+  mba: 'mba_loan'
+  medical_school: 'medical_school_loan'
+  medical_residency_and_relocation: 'medical_residency_and_relocation_loan'
+  parent: 'parent_loan'
+  undergraduate_smart_option: 'undergraduate_smart_option_loan'
+loan_type_id:
+  undergraduate_loan: "RefID=1905000001"
+  parent_loan: "RefID=1905000008"
+  career_training_loan: "RefID=1905000007"
+  k12_loan: 'RefID=1905000006'
+  graduate_loan: 'RefID=1905000001'
+  mba_loan: 'RefID=1218160001'
+  health_graduate_loan: 'RefID=1905000005'
+  dental_and_medical_loan: 'RefID=1817000001'
+  dental_loan: 'RefID=1238170001'
+  medical_loan: 'RefID=1228170001'
+  dental_residency_and_relocation_loan: 'RefID=1905000004'
+  medical_residency_and_relocation_loan: 'RefID=1905000003'
+  bar_study_loan: 'RefID=1905000002'
+  your_future_education_loan: 'RefID=1513979001'
+  their_future_education_loan: 'RefID=1513979501'
+  loan_finder_url: '/loanfinder/'
+  loan_finder_id: 'RefID=1905000001&loanfinder=Y'
+  loan_school_id: 'school_ID=00232901&loanfinder=Y'

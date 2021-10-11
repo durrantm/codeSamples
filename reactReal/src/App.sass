@@ -1,0 +1,1441 @@
+$btc: #f2a900
+$eth: #48cbd9
+$ltc: #989898
+$buy: #6f6
+$sell: #da7520
+$background: #110
+$danger: #f40
+$darkgrey: #111
+$lightgrey: #333
+$gridline: #222
+
+.App
+  text-align: center
+
+body
+  color: white
+  background-color: $background
+
+h1
+  font-size: 5vw
+  color: #0a0
+  margin-bottom: 1vw
+  padding-top: 12px
+  text-shadow: 3px 1px 2px #444
+
+a#app-title
+  text-decoration: none
+
+h2
+  font-size: 3vw
+  color: #dff
+  margin-bottom: 10px
+
+button
+  margin: 5px
+  font-size: 16px
+  padding: 6px 12px
+  border-radius: 6px
+  cursor: pointer
+  background-color: #93f9f9
+  border: none
+
+  &:focus
+    outline: none
+
+  &.small
+    font-size: 16px
+    padding: 3px 6px
+
+fieldset
+  display: inline-block
+  border: 0
+  padding: 0
+  margin: auto
+
+input[type="checkbox"]
+  vertical-align: middle
+  position: relative
+  bottom: 0.1em
+  transform: scale(1.8)
+
+@-moz-document url-prefix()
+  input[type="checkbox"]
+    vertical-align: middle
+    margin-bottom: 5px
+
+    &:checked
+      filter: hue-rotate(180deg)
+
+  section#trade-entry .trading-area
+    padding-bottom: 20px
+    padding-top: 15px
+
+input
+  &[type="checkbox"]:hover
+    cursor: pointer
+
+  &[type="text"], &[type="number"], &[type="text"]:focus, &[type="number"]:focus
+    font-size: 20px
+    border-radius: 6px
+    border: none
+    padding: 3px 6px
+
+select
+  font-size: 20px
+  border-radius: 6px
+  border: none
+  padding: 3px 6px
+
+  &:focus
+    outline: none
+    box-shadow: 0 0 3px 3px gold
+
+caption
+    border: 0
+    clip: rect(0, 0, 0, 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+
+ul.error-area
+  background-color: $danger
+  list-style: none
+  width: 630px
+  margin: 10px auto 30px
+  border-radius: 6px
+  padding: 0
+  color: black
+
+  li
+    padding: 8px 0
+
+.loading-spinner
+  display: inline-block
+  position: relative
+  width: 80px
+  height: 80px
+
+  div
+    box-sizing: border-box
+    display: block
+    position: absolute
+    width: 50px
+    height: 50px
+    margin: 8px
+    border: 8px solid #fff
+    border-radius: 50%
+    animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+    border-color: #fff transparent transparent transparent
+
+div.allocation-bar
+  height: 6px
+  width: 50vw
+  max-width: 250px
+  background-color: green
+  margin: -5px auto 0
+  display: flex
+
+  div
+    height: 100%
+
+.loading-spinner div
+  &:nth-child(1)
+    animation-delay: -0.45s
+
+  &:nth-child(2)
+    animation-delay: -0.3s
+
+  &:nth-child(3)
+    animation-delay: -0.15s
+
+@keyframes loading
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+.txt_loading
+  margin-top: 10vw
+  font-size: 4vw
+  color: #eee
+
+span.vertical-divider
+  color: grey
+
+.USD
+  color: #8d7520
+
+.XSD
+  color: goldenrod
+
+.BTC
+  color: $btc
+
+.ETH
+  color: $eth
+
+.LTC
+  color: $ltc
+
+.BUY
+  color: $buy
+
+.SELL
+  color: $sell
+
+.lefty
+  text-align: left
+
+.righty
+  text-align: right
+
+.rollover
+  position: absolute
+  pointer-events: none
+  background-color: #444
+  margin-top: 15px
+  border-radius: 8px
+  padding: 8px
+  font-weight: bold
+  text-align: center
+
+  &.USD
+    color: lightgreen
+
+  &.LTC
+    color: #bababa
+
+.rollover_details
+  text-align: right
+
+.rollover
+  &::before
+    content: " "
+    height: 0
+    position: absolute
+    width: 0
+    border: 10px solid transparent
+    border-bottom-color: #444
+    top: -20px
+    margin-left: -10px
+
+  p
+    margin: 4px 0
+
+  &.hidden
+    opacity: 0
+
+nav
+  margin-top: 15px
+  margin-bottom: 10px
+
+  .nav-link
+    font-size: 3.2vw
+    color: #aa8b97
+    padding-left: 8px
+    padding-right: 8px
+    text-decoration: none
+
+    &.active
+      color: inherit
+      text-shadow: yellow 0 0 3px
+
+    &:hover
+      color: yellow
+      text-decoration: underline
+
+    &:focus
+      color: inherit
+
+.bg-black
+  background-color: black
+
+section
+  &#currency-data
+    padding-bottom: 20px
+    font-weight: bold
+
+    .num-api-calls
+      color: goldenrod
+
+    .column-heading
+      color: inherit
+
+    .price, .asset_dollars, .asset_amount_header
+      text-align: right
+
+    .asset_amount
+      font-size: 2.8vw
+      text-align: center
+      padding-top: 18px
+      padding-right: 0
+      padding-left: 0
+
+    #call-counter
+      padding-top: 20px
+      font-size: 2.2vw
+      color: #dff
+
+    .time-now
+      color: #777
+      font-size: 3vw
+
+    div#total-balance-amount
+      padding-top: 8px
+      padding-bottom: 22px
+
+    span.total-balance
+      color: limegreen
+      font-size: 4vw
+
+  &#markets h2#markets
+    text-align: center
+
+  &#markets table#markets
+    margin-left: auto
+    margin-right: auto
+
+table#wallet-details .math-sign
+  padding: 0 1.2vw 0 0.5vw
+  font-size: 3vw
+
+button.delete-me
+  color: white
+  text-decoration: none
+  min-width: 10px
+  text-align: center
+  cursor: pointer
+  font-size: 3vw
+  padding: 0
+  margin: 0
+
+  &:hover, &:focus-visible
+    color: red
+
+.border-bottom td
+  border-bottom: 2px solid $gridline
+
+div.filters
+  position: sticky
+  top: 10px
+  background: $background
+  z-index: 2
+
+/* --- Executions and Orders - ".trades" for both ---
+
+table.trades
+  min-width: 550px
+  border-spacing: 0
+
+  thead
+    position: sticky
+    top: 0
+    background: $background
+    z-index: 2
+
+  tr
+    &.dark-row
+      background: $darkgrey
+
+    &.light-row
+      background: $lightgrey
+
+  td
+    height: 28px
+    font-size: 2.6vw
+    padding: 8px 10px 8px
+    white-space: nowrap
+
+  th img
+    width: 17px
+    height: 17px
+
+  .row
+    color: gold
+
+  th
+    top: 0
+    background: inherit
+    padding-bottom: 10px
+    padding-top: 10px
+    padding-right: 10px
+    border-bottom: 2px solid $background
+    font-size: 2.8vw
+
+  tr.trade-totals
+    font-weight: bold
+
+    td.top-totals
+      text-align: right
+      padding-right: 10px
+
+      &.total
+        text-align: left
+
+tr.limit-btn-row
+  background-color: $background
+
+  &.limit-btn-row th
+    padding-top: 0
+    padding-bottom: 0
+
+  thead th, tfoot td
+    font-weight: bold
+    font-size: 2.8vw
+
+  thead
+    position: sticky
+    top: 0
+    background: $background
+    z-index: 2
+
+    td
+      padding-top: 10px
+      padding-bottom: 10px
+      font-size: 2.8vw
+      font-weight: bold
+      background: #111119
+
+  tfoot
+    background: #111119
+
+  td.asset-price
+    width: 10vw
+
+span.num-records
+  color: goldenrod
+  text-shadow: yellow 0 0 1px
+
+section#executions span.total-fees
+  color: goldenrod
+
+table#executions
+  margin-top: 0px
+
+  thead
+    tr.limit-btn-row
+      div.limit-btn-group
+        padding-right: 20px
+
+  .executions-rebate, .executions-order
+    display: none
+
+section#orders
+  div.no-orders
+    padding-top: 0
+    margin-right: 15px
+
+  button.bulk-select-btn
+    background-color: goldenrod
+
+    &:hover
+      background-color: gold
+
+      &:enabled:active
+        background-color: white
+
+  td.multi-order, th.multi-order
+    text-align: center
+
+  button.cancel
+    &:focus-visible
+      background-color: lightskyblue
+
+    &:hover:enabled
+      background-color: lightskyblue
+
+      &:active
+        background-color: white
+
+table#orders
+  thead
+    tr.limit-btn-row
+      .limit-btn-group
+        padding-right: 40px
+
+    tr.trade-totals
+      .total-buys-sells
+        padding-right: 40px
+
+  .orders-order
+    display: none
+
+  .row.batch-mode:hover
+    background: #a94825
+    cursor: pointer
+
+fieldset
+  .chkbox_label
+    padding: 0 10px
+    font-size: 4vw
+    font-weight: bold
+    user-select: none
+
+    &.BUY
+      color: $buy
+
+      &:hover
+        color: #bfb
+
+    &.SELL
+      color: $sell
+
+      &:hover
+        color: #faa
+
+  label
+    &.BTC.chkbox_label:active, &.ETH.chkbox_label:active, &.LTC.chkbox_label:active
+      color: white
+
+  .BTC.chkbox_label:hover
+    color: yellow
+
+  .ETH.chkbox_label:hover
+    color: lightblue
+
+  .LTC.chkbox_label:hover
+    color: #cbcbcb
+
+  input.show-currency
+    width: 10px
+    height: 10px
+    margin-right: 10px
+
+.order-btn-group
+  margin: 16px auto -16px
+  position: sticky
+  top: 50px
+  background: $background
+  z-index: 2
+
+section
+  &#orders button
+    &.batch-delete
+      &:hover, &:focus
+        background-color: lightskyblue
+
+      &:focus-visible
+        background-color: lightsteelblue
+
+      &:hover:enabled
+        background-color: lightsteelblue
+
+        &:active
+          background-color: white
+
+    &.delete-me
+      &.light-row
+        background-color: $lightgrey
+
+      &.dark-row
+        background-color: $darkgrey
+
+  &#executions div.body.no-executions
+    margin-top: 15px
+    margin-right: 15px
+
+  &#executions div.body, &#orders div.body, &#trade-entry div.body
+    display: -webkit-flex
+    display: flex
+    -webkit-align-items: center
+    align-items: center
+    -webkit-justify-content: center
+    justify-content: center
+    color: #fff
+    margin: 16px auto
+
+  &#executions fieldset.buy-sell-filter-fieldset
+    border-right: 1px solid white
+    padding-right: 20px
+    margin-right: 20px
+
+/* ---------------- Trade Entry ----------------
+
+div.trading-collapsible-title
+  padding-bottom: 3px
+  padding-top: 3px
+
+table
+  &.trading-wallet .label, &.trading-options
+    margin: 0 auto 10px auto
+
+  &.trading-wallet
+    margin: 0 auto 10px auto
+    padding-top: 0
+
+  &.trading-options
+    padding-top: 10px
+
+    h2
+      margin: 5px 0
+
+  &.trading-wallet
+    h2
+      font-size: 5vw
+
+    .label
+      color: white
+
+section#trade-entry
+  padding-right: 5px
+
+  h2
+    padding-right: 5px
+
+  select
+    color: inherit
+    background-color: black
+    border: 0
+
+    &:hover
+      color: lightgreen
+
+    &:focus
+      color: lightgreen
+      box-shadow: 0 0 5px white
+
+  option
+    background-color: black
+
+  div.body
+    margin: 0 auto
+    padding: 20px
+
+table.trade-entry
+  border-spacing: 0
+  .table-total
+    text-decoration: overline
+    height: 28px
+    font-size: 2.6vw
+    padding: 8px 10px 8px
+    border-spacing: 0
+
+  thead td, tbody td, tfoot td
+    height: 28px
+    font-size: 2.6vw
+    padding: 8px 10px 8px
+    border-spacing: 0
+
+  tbody td
+    color: gold
+
+  thead th
+    top: 0
+    padding-bottom: 10px
+    padding-top: 10px
+    padding-right: 10px
+    border-bottom: 2px solid $background
+    font-weight: bold
+    font-size: 4.5vw
+
+  tfoot td
+    font-weight: bold
+    font-size: 3vw
+
+  thead, tfoot
+    background: #111119
+
+    min-width: 450px
+    max-width: 620px
+
+.trading-collapsible-title
+  min-width: 450px
+  max-width: 620px
+
+table
+  &.trading-options
+    td.lefty
+      padding-left: 5px
+
+    tr td
+      padding-bottom: 8px
+
+  &.trade-entry
+    thead th, tbody td
+      width: 20%
+
+    thead th
+      &:nth-child(5)
+        text-align: right
+
+    th:nth-child(3), td:nth-child(3)
+      width: 22%
+
+    th
+      &:nth-child(4), &:nth-child(5)
+        width: 22%
+
+    td
+      &:nth-child(4), &:nth-child(5)
+        width: 24%
+
+    th:first-child, td:first-child
+      width: 4%
+      padding: 0
+
+    td:first-child
+      text-align: right
+      padding-right: 10px
+
+    th:last-child, td:last-child
+      width: 6%
+
+    tr.row td
+      border-bottom: 2px solid $gridline
+
+    th:last-child
+      border-right: 0
+
+    tr:last-child th
+      background: black
+
+    thead tr:first-child th
+      padding-top: 18px
+      border-bottom: 0
+
+    .row
+      &:nth-child(odd)
+        background: $lightgrey
+
+      input
+        width: 90%
+        text-align: right
+
+        &.error
+          outline: none
+          box-shadow: 0 0 3px 3px $danger
+
+          &:focus
+            outline: none
+            box-shadow: 0 0 3px 3px $danger
+
+section#trade-entry
+  padding-bottom: 25px
+
+  table.trading-wallet h2
+    margin: 0
+
+    &:first-child
+      margin-right: 5px
+
+  .table-container
+    max-height: 0
+    transition: max-height 0.7s ease-in-out -0.2s
+    overflow: hidden
+
+    &.active
+      max-height: 3000px
+
+  button
+    &.BUY
+      color: $buy
+      background-color: #1d2622
+      font-weight: bold
+
+    &.SELL
+      color: $sell
+      background-color: #340100
+      font-weight: bold
+
+  .trading-collapsible-title
+    margin: 0 auto
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding-right: 10px
+
+  div button.trading-title
+    font-size: 4vw
+    padding: 12px 0 4px
+    margin: 0
+    flex: 1
+
+  .trading-area
+    padding-bottom: 10px
+    max-width: 650px
+    margin: auto
+
+  button
+    &.trading-title
+      &:hover, &:focus-visible
+        text-shadow: 0 0 4px
+
+    &.BUY.trading-title
+      &:hover, &:focus-visible
+        color: #e1f3d1
+
+    &.SELL.trading-title
+      &:hover, &:focus-visible
+        color: #fbb
+
+  .trading-area
+    .trading-toggle-plus-icon, .trading-toggle-minus-icon
+      color: inherit
+
+    .trading-toggle-plus-icon
+      font-size: 35px
+      padding-right: 19px
+
+    .trading-toggle-minus-icon
+      font-size: 35px
+      padding-right: 15px
+      padding-left: 12px
+
+  .BUY.trading-area
+    background-color: #1d2622
+    border-top-right-radius: 15px
+    border-top-left-radius: 15px
+
+  .SELL.trading-area
+    background-color: #340100
+    border-bottom-right-radius: 15px
+    border-bottom-left-radius: 15px
+    margin-bottom: 25px
+
+  h3
+    margin-bottom: 0
+
+  input#trade-name
+    width: 280px
+
+    &:focus
+      background-color: #ff9
+
+table.trade-entry input[type="text"]:focus
+  background-color: #ff9
+
+section#trade-entry table.trade-entry th
+  &.BTC
+    color: $btc
+
+  &.ETH
+    color: $eth
+
+  &.LTC
+    color: $ltc
+
+button
+  &.plus_or_minus
+    font-weight: bold
+    margin: 2px 12px
+    padding: 5px 10px
+    font-size: large
+
+  &.danger
+    background-color: darkorange
+
+    &:disabled
+      background-color: #c0aba4
+      cursor: not-allowed
+      color: #343434
+
+    &:focus-visible
+      background-color: burlywood
+
+    &:hover:enabled
+      background-color: red
+
+      &:active
+        background-color: #d66
+
+  &.add_rows
+    &:focus-visible
+      background-color: lightsteelblue
+
+    &:hover:enabled
+      background-color: #199
+
+      &:active
+        background-color: lightblue
+
+  &.trading-submit, &.trading-clear
+    font-size: 18px
+    padding: 8px
+
+  &.trading-submit
+    &:hover, &:focus-visible
+      background-color: #199
+
+  &.trading-clear
+    &:hover, &:focus-visible
+      background-color: #199
+
+  &.trading-submit:active, &.trading-clear:active
+    background-color: lightblue
+
+div.limit-btn-group
+  margin-top: 10px
+
+  button
+    border-radius: 16px
+    padding: 3px 10px
+    margin: 0 5px
+
+    &.active
+      background-color: #55f
+      color: white
+
+section.errors-main
+  color: $danger
+  min-height: 23px
+
+  button
+    cursor: pointer
+    background: none
+    border: 1px solid $danger
+    color: $danger
+    border-radius: 50%
+    padding: 3px 6px
+
+.limit-btn-group button
+  &:hover, &:focus
+    background-color: lightskyblue
+
+  &.active
+    &:hover, &:focus
+      background-color: #53f
+
+section.errors-main button
+  &:focus
+    outline: none
+
+  &:hover
+    background-color: #ea7171
+
+table.trade-entry .row:nth-child(even)
+  background: $darkgrey
+
+  button
+    background: $darkgrey
+
+section#trade-entry
+  div.trading-area div
+    line-height: 20px
+
+  table.trade-entry tr
+    line-height: 8vw
+
+  div
+    &.BUY > button
+      background-color: #1d2622
+
+    &.SELL > button
+      background-color: #340100
+
+    &.BUY > button:focus-visible:hover:enabled
+      color: limegreen
+
+    &.SELL > button:focus-visible:hover:enabled
+      color: #540100
+
+div
+  &.allocation-bar
+    .BTC
+      background-color: $btc
+
+    .ETH
+      background-color: $eth
+
+    .LTC
+      background-color: $ltc
+
+  &.price-ticker-wrapper
+    .price-ticker-wrapper
+      margin-bottom: 20px
+
+      height: 2vw
+
+    .price-ticker
+      margin: 20px auto 0
+      background: linear-gradient(0deg, $darkgrey, $gridline)
+      border-radius: 5px
+      visibility: hidden
+      display: none
+
+    .price-ticker-cell
+      fill: #121212
+
+      &.on
+        fill: #0a0
+
+    .price-ticker-buttons
+      margin: 0 auto
+      display: none
+
+      svg
+        color: #93f9f9
+        cursor: pointer
+        margin: 3px
+
+        &:hover
+          color: #dff
+
+        &.disabled
+          color: #777
+          cursor: not-allowed
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+  section#trade-entry .trading-area
+    padding-bottom: 20px
+    padding-top: 15px
+
+@media screen and (max-width: 400px)
+  section#trade-entry .trading-collapsible-title
+    justify-content: normal
+    text-align: center
+    padding-left: 45vw
+
+@media screen and (min-width: 401px) and (max-width: 599px)
+  section#trade-entry .trading-collapsible-title
+    justify-content: space-evenly
+
+@media screen and (max-width: 600px)
+  $huge: 10vw
+  $bigger: 8vw
+  $big: 7vw
+  $mediumLargest: 6vw
+  $mediumLarger: 5vw
+  $mediumLarge: 4.5vw
+  $mediumPlus: 4.2vw
+  $medium: 4vw
+  $mediumSmall: 3.4vw
+  $mediumSmallest: 3.2vw
+  $small: 3.1vw
+  h1
+    font-size: $huge
+    margin-top: 2px
+
+  h2
+    font-size: $big
+    margin-top: 5px
+    margin-bottom: 4px
+
+  nav
+    margin-top: 10px
+    margin-bottom: 2px
+
+  .txt_loading
+    font-size: 4vw
+
+  div.allocation-bar
+    width: 58vw
+    max-width: none
+
+  nav .nav-link
+    font-size: $mediumLarge
+    padding-left: 1.5vw
+    padding-right: 1.5vw
+
+  ul.error-area
+    width: 92vw
+
+  section
+    &#currency-data table#markets
+      font-size: $big
+      font-weight: bold
+
+    &#wallets
+      font-size: $mediumLargest
+
+    &#currency-data, &#total-balance
+      font-size: $bigger
+
+  div#total-balance-amount, span.total-balance
+    font-size: $bigger
+
+  section#currency-data div#total-balance-amount
+    padding-bottom: 8px
+
+  table#wallet-details
+    line-height: $medium
+
+    tr:last-child
+      line-height: $bigger
+
+  section
+    &#currency-data
+      td.asset_amount
+        padding-top: 14px
+
+      div#call-counter
+        font-size: $medium
+        padding-top: 14px
+        padding-bottom: 2px
+
+    &#markets .time-now
+      font-size: $mediumLarge
+
+    &#total-balance span.total-balance
+      font-size: $mediumLarger
+
+    &#currency-data section#wallets span.total-balance
+      font-size: $big
+
+  table
+    &.wallet-details td, &.markets tr td
+      padding: 1.6vw
+
+  table#orders
+    thead
+      tr.limit-btn-row
+        .limit-btn-group
+          padding-right: 3vw
+
+      tr.trade-totals
+        .total-buys-sells
+          padding-right: 4.5vw
+
+  table#executions
+    thead
+      tr.limit-btn-row
+        div.limit-btn-group
+          padding-right: 0
+
+  section
+    &#wallets td
+      &.column-heading, &.asset_amount
+        font-size: $medium
+
+    &#orders .chkbox_label
+      font-size: $mediumPlus
+      padding: 0 5px
+
+    &#executions
+      .chkbox_label
+        font-size: $mediumPlus
+        padding: 0 5px
+
+      fieldset.buy-sell-filter-fieldset
+        padding-right: 10px
+        margin-right: 10px
+
+    &#orders input.show-currency, &#executions input.show-currency
+      width: 3vw
+      height: 3vw
+
+  table.trades
+    min-width: 380px
+
+    tr td
+      padding: 0.8vw
+      font-size: $small
+
+    input
+      font-size: $small
+
+    td.top-totals
+      font-size: $mediumSmallest
+
+    td.total
+      text-align: left
+
+      span
+        &.BUY, &.SELL, &.total-fees
+          font-size: $mediumSmall
+
+    thead th, tfoot td
+      font-size: $mediumSmallest
+
+  .loading-spinner div
+    width: 10vw
+    height: 10vw
+
+  .limit-btn-group button
+    padding: 1vw 3vw
+    margin: 1vw 2vw 0 2vw
+
+  table.trading-options input[type="text"]
+    max-width: 45vw
+
+  section#trade-entry
+    .table-total
+      font-size: $medium
+
+    h2
+      font-size: $medium
+
+    table
+      &.trading-options h2
+        font-size: $medium
+
+        &#currency-market-price
+          font-size: $mediumLargest
+
+      &.trading-wallet h2
+        font-size: $mediumLarger
+
+    div
+      &#BUY button.trading-title, &#SELL button.trading-title
+        font-size: $bigger
+        flex: unset
+
+  table.trade-entry
+    thead td, tbody td, tfoot td
+      height: 28px
+      font-size: $medium
+      padding: 6px 8px 6px
+      white-space: nowrap
+      border-spacing: 0
+
+      &:nth-child(4),
+      &:nth-child(5)
+        padding-right: 2px
+        padding-left: 0
+
+  section#trade-entry .trading-area
+    .trading-toggle-plus-icon
+      font-size: $big
+      padding-left: 2vw
+
+    .trading-toggle-minus-icon
+      font-size: $big
+      padding-left: 2vw
+      padding-left: $medium
+
+@media screen and (min-width: 601px)
+  .txt_loading
+    font-size: 2.5vw
+
+  section
+    &#currency-data
+      font-size: 4vw
+
+      .total-balance
+        font-size: 4.5vw
+
+    &#wallets td
+      &.column-heading
+        font-size: 2.5vw
+
+      &.asset_dollars
+        padding-right: 30px
+
+  table
+    &#markets tr
+      line-height: 30px
+
+    &#wallet-details
+      tr
+        line-height: 15px
+
+      td.math-sign
+        font-size: 20px
+        padding: 0 5px 0 5px
+
+    &#markets td
+      padding: 8px
+      vertical-align: baseline
+
+    &#wallet-details td
+      padding: 8px
+      vertical-align: baseline
+      padding: 16px 10px
+
+  section
+    &#trades .chkbox_label, &#orders .chkbox_label, &#executions .chkbox_label
+      font-size: 22px
+
+    &#orders input.show-currency, &#executions input.show-currency
+      width: 14px
+      height: 14px
+
+    &#orders div.order-btn-group button
+      padding-left: 15px
+      padding-right: 15px
+      margin-left: 14px
+      margin-right: 14px
+
+  table.trades button.delete-me
+    font-size: 18px
+    padding: 0
+    margin: 0
+
+  ul.error-area
+    width: 570px
+
+  table
+    &.trade-entry .table-total
+      font-size: 22px
+
+    &.trade-entry button.delete-me
+      font-size: 18px
+      padding: 0
+      margin: 0
+
+    &.trading-wallet
+      .label, h2
+        font-size: 25px
+
+    &.trade-entry
+      tbody td
+        &:nth-child(2) input
+          width: 80%
+
+  section#trade-entry table
+    &.trade-entry tr, &.trade-entry th
+      line-height: 22px
+      font-size: 22px
+
+    &.trading-options h2#currency-market-price
+      font-size: 4.1vw
+
+@media screen and (min-width: 800px)
+  h1
+    font-size: 40px
+    margin-bottom: 10px
+    margin-top: 20px
+
+  h2, nav .nav-link
+    font-size: 24px
+
+  div.price-ticker-wrapper
+    height: 28px
+
+  ul.error-area
+    width: 600px
+
+  .txt_loading
+    margin-top: 40px
+    font-size: 25px
+
+  section
+    &#wallets section#total-balance table#total-balance-amount
+      min-height: 72px
+
+    &#currency-data
+      font-size: 30px
+      font-weight: bold
+
+      .total-balance
+        font-size: 36px
+
+      span.total-balance
+        font-size: 30px
+
+      div#call-counter
+        font-size: 20px
+        padding-left: 40px
+
+      td
+        &.column-heading
+          font-size: 16px
+
+        &.asset_amount
+          font-size: 22px
+          padding-top: 20px
+
+    &#markets .time-now
+      font-size: 24px
+
+  table
+    &#executions .executions-order
+      display: table-cell
+
+    &.trades
+      td
+        padding: 10px
+
+      thead td, tfoot td
+        font-size: 23px
+
+      thead th
+        font-size: 20px
+
+      td.asset-price
+        width: 90px
+
+  section#trade-entry
+    table.trading-options h2#currency-market-price
+      font-size: 28px
+
+    div
+      &#BUY button.trading-title, &#SELL button.trading-title
+        font-size: 32px
+
+  table
+    &.trade-entry tbody td
+      padding: 10px
+      font-size: 20px
+
+    &.trades tbody td
+      font-size: 20px
+
+    &.trade-entry
+      thead td, tfoot td
+        font-size: 22px
+
+      tbody td
+        &:nth-child(2) input
+          width: 70%
+
+      thead th
+        font-size: 20px
+
+  .limit-btn-group button
+    font-size: 16px
+    padding: 3px 10px
+    margin: 0 5px
+
+@media screen and (min-width: 940px)
+  div.price-ticker-wrapper
+    height: 8px
+
+    .price-ticker
+      display: flex
+      flex-wrap: wrap
+      visibility: visible
+
+  table
+    &#markets tr
+      line-height: 38px
+
+    &#wallet tr
+      line-height: 44px
+
+  section
+    &#currency-data
+      display: flex
+      justify-content: center
+
+    &#markets
+      padding-top: 105px
+      padding-right: 24px
+
+    &#total-balance
+      padding-right: 220px
+
+    &#wallets span.currency
+      display: none
+
+    &#currency-data td.all-assets
+      visibility: hidden
+
+    &#wallets table#wallet-details td.asset_dollars
+      padding-right: 36px
+
+    &#markets .time-now
+      font-size: 22px
+
+  div
+    &#call-counter
+      text-align: left
+
+    &#total-balance-amount
+      padding-bottom: 32px
+
+  table
+    &.trades
+      span.narrow-only
+        display: none
+
+    &#executions .executions-rebate, &#orders .orders-order
+      display: table-cell
+
+@media screen and (max-width: 1200px)
+  section#orders span.multi-order-name
+    display: none

@@ -1,0 +1,7 @@
+FROM selenium/standalone-chrome
+
+WORKDIR /tmp
+COPY certs/slm_int.pem slm_int.pem
+COPY certs/slm_root.pem slm_root.pem
+RUN echo "cat slm_int.pem slm_root.pem >> /usr/lib/ssl/certs/ca-certificates.crt" > cmd.sh
+RUN sudo "bash" "./cmd.sh"

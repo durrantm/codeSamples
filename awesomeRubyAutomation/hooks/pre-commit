@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# This is a pre-commit git hook to run rubocop on modified, added, or copied files
+
+FILES="$(git diff --cached --name-only --diff-filter=AMC | grep '\.rb$' | tr '\n' ' ')"
+
+if [ -n "$FILES" ]
+then
+	rubocop ${FILES}
+
+	if [ $? -ne 0 ]; then
+		echo "Fix issues and commit again"
+		exit 1
+	fi
+else
+	echo "No offenses found"
+fi
+
+exit 0

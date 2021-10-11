@@ -1,0 +1,15 @@
+#source 'http://repo.internal.slmbank.net:8081/repository/ruby-group-salliemae/'
+source 'http://rubygems.org'
+
+gem 'rspec'
+gem 'selenium-webdriver'
+gem 'capybara'
+gem 'rspec-retry'
+gem 'pry-byebug'
+gem 'rubocop', '~> 0.56.0', require: false
+gem 'aws-sdk-dynamodb'
+gem 'browserstack-local'
+gem 'savon', '~> 2.0'
+gem 'rest-client'
+gem 'require_all'
+gem 'recursive-open-struct'

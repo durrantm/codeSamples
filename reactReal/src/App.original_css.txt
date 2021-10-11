@@ -1,0 +1,1267 @@
+/* previous css */
+.App {
+  text-align: center;
+}
+body {
+  color: white;
+  background-color: #110;
+}
+h1 {
+  font-size: 5vw;
+  color: #0a0;
+  margin-bottom: 1vw;
+  text-shadow: 3px 1px 2px #444;
+}
+a#app-title {
+  text-decoration: none;
+}
+h2 {
+  font-size: 3vw;
+  color: #dff;
+  margin-bottom: 10px;
+}
+button {
+  margin: 5px;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #93f9f9;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+button.small {
+  font-size: 16px;
+  padding: 3px 6px;
+}
+fieldset {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  margin: auto;
+}
+input[type="checkbox"] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 0.1em;
+  transform: scale(1.8);
+}
+@-moz-document url-prefix() {
+  input[type="checkbox"] {
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  input[type="checkbox"]:checked {
+    filter: hue-rotate(180deg);
+  }
+}
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+input[type="text"],
+input[type="number"],
+input[type="text"]:focus,
+input[type="number"]:focus,
+select {
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+  padding: 3px 6px;
+}
+select:focus {
+  outline: none;
+  box-shadow: 0 0 3px 3px gold;
+}
+ul.error-area {
+  background-color: #f40;
+  list-style: none;
+  width: 630px;
+  margin: 10px auto 30px;
+  border-radius: 6px;
+  padding: 0;
+  color: black;
+}
+ul.error-area li {
+  padding: 8px 0;
+}
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+div.allocation-bar {
+  height: 6px;
+  width: 50vw;
+  max-width: 250px;
+  background-color: green;
+  margin: -5px auto 0;
+  display: flex;
+}
+div.allocation-bar div {
+  height: 100%;
+}
+.loading-spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading-spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading-spinner div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.txt_loading {
+  margin-top: 10vw;
+  font-size: 4vw;
+  color: #eee;
+}
+.USD {
+  color: #8d7520;
+}
+.XSD {
+  color: goldenrod;
+}
+.BTC {
+  color: #f2a900;
+}
+.ETH {
+  color: #48cbd9;
+}
+.LTC {
+  color: #989898;
+}
+.BUY {
+  color: #6f6;
+}
+.SELL {
+  color: #da7520;
+}
+.lefty {
+  text-align: left;
+}
+.righty {
+  text-align: right;
+}
+.rollover.USD {
+  color: lightgreen;
+}
+.rollover.LTC {
+  color: #bababa;
+}
+.rollover {
+  position: absolute;
+  pointer-events: none;
+  background-color: #444;
+  margin-top: 15px;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+.rollover_details {
+  text-align: right;
+}
+.rollover::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #444;
+  top: -20px;
+  margin-left: -10px;
+}
+.rollover p {
+  margin: 4px 0;
+}
+.rollover.hidden {
+  opacity: 0;
+}
+nav {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+nav .nav-link {
+  font-size: 3.2vw;
+  color: #aa8b97;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-decoration: none;
+}
+nav .nav-link.active {
+  color: inherit;
+  text-shadow: yellow 0 0 3px;
+}
+nav .nav-link:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+nav .nav-link:focus {
+  color: inherit;
+}
+.text-center {
+  text-align: center;
+}
+.bg-black {
+  background-color: black;
+}
+section#currency-data {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+section#currency-data .num-api-calls {
+  color: goldenrod;
+}
+section#currency-data .column-heading {
+  color: inherit;
+}
+section#currency-data .price {
+  text-align: right;
+}
+section#currency-data .asset_dollars {
+  text-align: right;
+}
+section#currency-data .asset_amount_header {
+  text-align: right;
+}
+section#currency-data .asset_amount {
+  font-size: 2.8vw;
+  text-align: center;
+  padding-top: 18px;
+  padding-right: 0;
+  padding-left: 0;
+}
+section#currency-data #call-counter {
+  padding-top: 20px;
+  font-size: 2.2vw;
+  color: #dff;
+}
+section#currency-data .time-now {
+  color: #777;
+  font-size: 3vw;
+}
+section#currency-data div#total-balance-amount {
+  padding-top: 8px;
+  padding-bottom: 22px;
+}
+section#currency-data span.total-balance {
+  color: limegreen;
+  font-size: 4vw;
+}
+section#markets h2#markets {
+  text-align: center;
+}
+table#wallet-details .math-sign {
+  padding: 0 1.2vw 0 0.5vw;
+  font-size: 3vw;
+}
+button.delete-me {
+  color: white;
+  text-decoration: none;
+  min-width: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+}
+button.delete-me:hover,
+button.delete-me:focus-visible {
+  color: red;
+}
+
+.border-bottom td {
+  border-bottom: 2px solid #222;
+}
+
+/* --- Executions and Orders - ".trades" for both --- */
+table.trades tr.dark-row {
+  background: #111;
+}
+table.trades tr.light-row {
+  background: #333;
+}
+table.trades,
+table.trades td {
+  height: 28px;
+  font-size: 2.6vw;
+  padding: 8px 10px 8px;
+  white-space: nowrap;
+  border-spacing: 0;
+}
+table.trades th img {
+  width: 17px;
+  height: 17px;
+}
+table.trades {
+  min-width: 550px;
+}
+table.trades .row {
+  color: gold;
+}
+table.trades th {
+  top: 0;
+  background: inherit;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  border-bottom: 2px solid #110;
+  font-size: 2.8vw;
+}
+tr.limit-btn-row th {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+table.trades thead th,
+table.trades tfoot td {
+  font-weight: bold;
+  font-size: 2.8vw;
+}
+table.trades thead td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 2.8vw;
+  font-weight: bold;
+}
+table.trades thead,
+table.trades tfoot {
+  background: #111119;
+}
+table.trades td.asset-price {
+  width: 10vw;
+}
+table.trades span.num-records {
+  color: goldenrod;
+}
+section#executions span.total-fees {
+  color: goldenrod;
+}
+table#executions .executions-rebate {
+  display: none;
+}
+table#executions .executions-order {
+  display: none;
+}
+section#orders button.bulk-select-btn {
+  background-color: goldenrod;
+}
+section#orders button.bulk-select-btn:hover {
+  background-color: gold;
+}
+section#orders button.bulk-select-btn:hover:enabled:active {
+  background-color: white;
+}
+section#orders td.multi-order,
+section#orders th.multi-order {
+  text-align: center;
+}
+section#orders button.cancel:focus-visible,
+section#orders button.cancel:hover:enabled {
+  background-color: lightskyblue;
+}
+section#orders button.cancel:hover:enabled:active {
+  background-color: white;
+}
+table#orders .orders-order {
+  display: none;
+}
+table#orders .row.batch-mode:hover {
+  background: #a94825;
+  cursor: pointer;
+}
+fieldset .chkbox_label {
+  padding: 0 10px;
+  font-size: 4vw;
+  font-weight: bold;
+  user-select: none;
+}
+fieldset .chkbox_label.BUY {
+  color: #6f6;
+}
+fieldset .chkbox_label.BUY:hover {
+  color: #bfb;
+}
+fieldset .chkbox_label.SELL {
+  color: #da7520;
+}
+fieldset .chkbox_label.SELL:hover {
+  color: #faa;
+}
+fieldset label.BTC.chkbox_label:active,
+fieldset label.ETH.chkbox_label:active,
+fieldset label.LTC.chkbox_label:active {
+  color: white;
+}
+fieldset .BTC.chkbox_label:hover {
+  color: yellow;
+}
+fieldset .ETH.chkbox_label:hover {
+  color: lightblue;
+}
+fieldset .LTC.chkbox_label:hover {
+  color: #cbcbcb;
+}
+fieldset input.show-currency {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+.order-btn-group {
+  margin: 16px auto -16px;
+}
+section#orders button.batch-delete:hover,
+section#orders button.batch-delete:focus {
+  background-color: lightskyblue;
+}
+section#orders button.batch-delete:focus-visible,
+section#orders button.batch-delete:hover:enabled {
+  background-color: lightsteelblue;
+}
+section#orders button.batch-delete:hover:enabled:active {
+  background-color: white;
+}
+section#orders button.delete-me.light-row {
+  background-color: #333;
+}
+section#orders button.delete-me.dark-row {
+  background-color: #111;
+}
+section#executions div.body,
+section#orders div.body,
+section#trade-entry div.body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+  margin: 16px auto;
+}
+section#executions fieldset.buy-sell-filter-fieldset {
+  border-right: 1px solid white;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+/* ---------------- Trade Entry ---------------- */
+div.trading-collapsible-title {
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+table.trading-wallet .label,
+table.trading-options,
+table.trading-wallet {
+  margin: 0 auto 10px auto;
+}
+table.trading-wallet {
+  padding-top: 0;
+}
+table.trading-options {
+  padding-top: 10px;
+}
+table.trading-options h2 {
+  margin: 5px 0;
+}
+table.trading-wallet h2 {
+  font-size: 5vw;
+}
+table.trading-wallet .label {
+  color: white;
+}
+section#trade-entry,
+section#trade-entry h2 {
+  padding-right: 5px;
+}
+section#trade-entry select {
+  color: inherit;
+  background-color: black;
+  border: 0;
+}
+section#trade-entry select:hover,
+section#trade-entry select:focus {
+  color: lightgreen;
+}
+section#trade-entry select:focus {
+  box-shadow: 0 0 5px white;
+}
+section#trade-entry option {
+  background-color: black;
+}
+section#trade-entry div.body {
+  margin: 0 auto;
+}
+table.trade-entry .table-total {
+  text-decoration: overline;
+}
+table.trade-entry,
+table.trade-entry thead td,
+table.trade-entry tbody td,
+table.trade-entry tfoot td {
+  height: 28px;
+  font-size: 2.6vw;
+  padding: 8px 10px 8px;
+  border-spacing: 0;
+}
+table.trade-entry tbody td {
+  color: gold;
+}
+table.trade-entry thead th {
+  top: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  border-bottom: 2px solid #110;
+}
+table.trade-entry thead th,
+table.trade-entry tfoot td {
+  font-weight: bold;
+  font-size: 3vw;
+}
+table.trade-entry thead,
+table.trade-entry tfoot {
+  background: #111119;
+}
+table.trade-entry,
+.trading-collapsible-title {
+  min-width: 450px;
+  max-width: 620px;
+}
+table.trading-options td.lefty {
+  padding-left: 5px;
+}
+table.trading-options tr td {
+  padding-bottom: 8px;
+}
+table.trade-entry thead th,
+table.trade-entry tbody td {
+  width: 18%;
+}
+table.trade-entry th:first-child {
+  padding-left: 15px;
+}
+table.trade-entry td:first-child {
+  padding-left: 30px;
+}
+table.trade-entry th:nth-child(3),
+table.trade-entry td:nth-child(3) {
+  width: 22%;
+}
+table.trade-entry th:nth-child(4),
+table.trade-entry th:nth-child(5),
+table.trade-entry td:nth-child(4),
+table.trade-entry td:nth-child(5) {
+  width: 22%;
+}
+table.trade-entry th:first-child,
+table.trade-entry td:first-child {
+  width: 10%;
+  text-align: center;
+}
+table.trade-entry th:last-child,
+table.trade-entry td:last-child {
+  width: 6%;
+}
+table.trade-entry tr.row td {
+  border-bottom: 2px solid #222;
+}
+table.trade-entry th:last-child {
+  border-right: 0;
+}
+table.trade-entry tr:last-child th {
+  background: black;
+}
+table.trade-entry thead tr:first-child th {
+  padding-top: 18px;
+  border-bottom: 0;
+}
+table.trade-entry .row:nth-child(odd) {
+  background: #333;
+}
+table.trade-entry .row input {
+  width: 90%;
+}
+table.trade-entry .row input.error,
+table.trade-entry .row input.error:focus {
+  outline: none;
+  box-shadow: 0 0 3px 3px #f40;
+}
+section#trade-entry table.trading-wallet h2 {
+  margin: 0;
+}
+section#trade-entry table.trading-wallet h2:first-child {
+  margin-right: 5px;
+}
+section#trade-entry .table-container {
+  max-height: 0;
+  transition: max-height 0.7s ease-in-out;
+  overflow: hidden;
+}
+section#trade-entry .table-container.active {
+  max-height: 3000px;
+}
+section#trade-entry button.BUY {
+  color: #6f6;
+  background-color: #1d2622;
+  font-weight: bold;
+}
+section#trade-entry button.SELL {
+  color: #da7520;
+  background-color: #340100;
+  font-weight: bold;
+}
+section#trade-entry .trading-collapsible-title {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 10px;
+}
+section#trade-entry div button.trading-title {
+  font-size: 4vw;
+  padding: 12px 0 4px;
+  margin: 0;
+  flex: 1;
+}
+section#trade-entry .trading-area {
+  padding-bottom: 10px;
+  max-width: 650px;
+  margin: auto;
+}
+section#trade-entry button.trading-title:hover,
+section#trade-entry button.trading-title:focus-visible {
+  text-shadow: 0 0 4px;
+}
+section#trade-entry button.BUY.trading-title:hover,
+section#trade-entry button.BUY.trading-title:focus-visible {
+  color: #e1f3d1;
+}
+section#trade-entry button.SELL.trading-title:hover,
+section#trade-entry button.SELL.trading-title:focus-visible {
+  color: #fbb;
+}
+section#trade-entry .trading-area .trading-toggle-plus-icon,
+section#trade-entry .trading-area .trading-toggle-minus-icon {
+  color: inherit;
+}
+section#trade-entry .trading-area .trading-toggle-plus-icon {
+  font-size: 35px;
+  padding-right: 19px;
+}
+section#trade-entry .trading-area .trading-toggle-minus-icon {
+  font-size: 35px;
+  padding-right: 15px;
+  padding-left: 12px;
+}
+section#trade-entry .BUY.trading-area {
+  background-color: #1d2622;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+section#trade-entry .SELL.trading-area {
+  background-color: #340100;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-bottom: 25px;
+}
+section#trade-entry {
+  padding-bottom: 25px;
+}
+section#trade-entry h3 {
+  margin-bottom: 0;
+}
+section#trade-entry input#trade-name {
+  width: 280px;
+}
+section#trade-entry input#trade-name:focus,
+table.trade-entry input[type="text"]:focus {
+  background-color: #ff9;
+}
+section#trade-entry table.trade-entry th.BTC {
+  color: #f2a900;
+}
+section#trade-entry table.trade-entry th.ETH {
+  color: #48cbd9;
+}
+section#trade-entry table.trade-entry th.LTC {
+  color: #989898;
+}
+button.plus_or_minus {
+  font-weight: bold;
+  margin: 2px 12px;
+  padding: 5px 10px;
+  font-size: large;
+}
+button.danger {
+  background-color: darkorange;
+}
+button.danger:disabled {
+  background-color: #c0aba4;
+  cursor: not-allowed;
+  color: #343434;
+}
+button.danger:focus-visible {
+  background-color: burlywood;
+}
+button.danger:hover:enabled {
+  background-color: red;
+}
+button.danger:hover:enabled:active {
+  background-color: #d66;
+}
+button.add_rows:focus-visible {
+  background-color: lightsteelblue;
+}
+button.add_rows:hover:enabled {
+  background-color: #199;
+}
+button.add_rows:hover:enabled:active {
+  background-color: lightblue;
+}
+button.trading-submit {
+  font-size: 18px;
+  padding: 8px;
+}
+button.trading-clear {
+  font-size: 18px;
+  padding: 8px;
+}
+button.trading-submit:hover,
+button.trading-submit:focus-visible,
+button.trading-clear:hover,
+button.trading-clear:focus-visible {
+  background-color: #199;
+}
+button.trading-submit:active,
+button.trading-clear:active {
+  background-color: lightblue;
+}
+.limit-btn-group button {
+  border-radius: 16px;
+  padding: 3px 10px;
+  margin: 0 5px;
+}
+.limit-btn-group button.active {
+  background-color: #55f;
+  color: white;
+}
+section.errors-main {
+  color: #f40;
+  min-height: 23px;
+}
+section.errors-main button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #f40;
+  color: #f40;
+  border-radius: 50%;
+  padding: 3px 6px;
+}
+.limit-btn-group button:hover,
+.limit-btn-group button:focus {
+  background-color: lightskyblue;
+}
+.limit-btn-group button.active:hover,
+.limit-btn-group button.active:focus {
+  background-color: #53f;
+}
+section.errors-main button:focus {
+  outline: none;
+}
+section.errors-main button:hover {
+  background-color: #ea7171;
+}
+table.trade-entry .row:nth-child(even),
+table.trade-entry .row:nth-child(even) button {
+  background: #111;
+}
+section#trade-entry div.trading-area div {
+  line-height: 20px;
+}
+section#trade-entry table.trade-entry tr {
+  line-height: 8vw;
+}
+section#trade-entry div.BUY > button {
+  background-color: #1d2622;
+}
+section#trade-entry div.SELL > button {
+  background-color: #340100;
+}
+section#trade-entry div.BUY > button:focus-visible:hover:enabled {
+  color: limegreen;
+}
+section#trade-entry div.SELL > button:focus-visible:hover:enabled {
+  color: #340100;
+}
+div.allocation-bar .BTC {
+  background-color: #f2a900;
+}
+div.allocation-bar .ETH {
+  background-color: #48cbd9;
+}
+div.allocation-bar .LTC {
+  background-color: #989898;
+}
+div.price-ticker-wrapper .price-ticker-wrapper {
+  margin-bottom: 20px;
+}
+div.price-ticker-wrapper {
+  height: 2vw;
+}
+div.price-ticker-wrapper .price-ticker {
+  margin: 20px auto 0;
+  background: linear-gradient(0deg, #111, #222);
+  border-radius: 5px;
+  visibility: hidden;
+  display: none;
+}
+div.price-ticker-wrapper .price-ticker-cell {
+  fill: #121212;
+}
+div.price-ticker-wrapper .price-ticker-cell.on {
+  fill: #0a0;
+}
+div.price-ticker-wrapper .price-ticker-buttons {
+  margin: 0 auto;
+  display: none;
+}
+div.price-ticker-wrapper .price-ticker-buttons svg {
+  color: #93f9f9;
+  cursor: pointer;
+  margin: 3px;
+}
+div.price-ticker-wrapper .price-ticker-buttons svg:hover {
+  color: #dff;
+}
+div.price-ticker-wrapper .price-ticker-buttons svg.disabled {
+  color: #777;
+  cursor: not-allowed;
+}
+@media screen and (max-width: 400px) {
+  section#trade-entry .trading-collapsible-title {
+    justify-content: normal;
+    text-align: center;
+    padding-left: 45vw;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 599px) {
+  section#trade-entry .trading-collapsible-title {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 10vw;
+    margin-top: 2px;
+  }
+  h2 {
+    font-size: 7vw;
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+  nav {
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+  .txt_loading {
+    font-size: 4vw;
+  }
+  div.allocation-bar {
+    width: 58vw;
+    max-width: none;
+  }
+  nav .nav-link {
+    font-size: 4.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+  }
+  ul.error-area {
+    width: 92vw;
+  }
+  section#currency-data table#markets {
+    font-size: 7vw;
+    font-weight: bold;
+  }
+  section#wallets {
+    font-size: 6vw;
+  }
+  section#currency-data,
+  section#total-balance,
+  div#total-balance-amount,
+  span.total-balance {
+    font-size: 8vw;
+  }
+  section#currency-data div#total-balance-amount {
+    padding-bottom: 8px;
+  }
+  table#wallet-details {
+    line-height: 4vw;
+  }
+  table#wallet-details tr:last-child {
+    line-height: 8vw;
+  }
+  section#currency-data td.asset_amount {
+    padding-top: 14px;
+  }
+  section#currency-data div#call-counter {
+    font-size: 4vw;
+    padding-top: 14px;
+    padding-bottom: 2px;
+  }
+  section#markets .time-now {
+    font-size: 4.5vw;
+  }
+  section#total-balance span.total-balance {
+    font-size: 5vw;
+  }
+  section#currency-data section#wallets span.total-balance {
+    font-size: 7vw;
+  }
+  table.wallet-details td {
+    padding: 1.6vw;
+  }
+  table.markets tr td {
+    padding: 1.6vw;
+  }
+  section#wallets td.column-heading {
+    font-size: 4vw;
+  }
+  section#wallets td.asset_amount {
+    font-size: 4vw;
+  }
+  section#orders .chkbox_label,
+  section#executions .chkbox_label {
+    font-size: 4.2vw;
+    padding: 0 5px;
+  }
+  section#executions fieldset.buy-sell-filter-fieldset {
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  section#orders input.show-currency,
+  section#executions input.show-currency {
+    width: 3vw;
+    height: 3vw;
+  }
+  table.trades tr td {
+    padding: 0.8vw;
+  }
+  table.trades tr td,
+  table.trades input {
+    font-size: 3.1vw;
+  }
+  table.trades {
+    min-width: 380px;
+  }
+  table.trades td.top-totals {
+    font-size: 3.2vw;
+  }
+  table.trades td.top-totals span.BUY,
+  table.trades td.top-totals span.SELL,
+  table.trades td.top-totals span.total-fees {
+    font-size: 3.4vw;
+  }
+  table.trades thead th,
+  table.trades tfoot td {
+    font-size: 3.2vw;
+  }
+  .loading-spinner div {
+    width: 10vw;
+    height: 10vw;
+  }
+  .limit-btn-group button {
+    padding: 1vw 3vw;
+    margin: 1vw 2vw 0 2vw;
+  }
+  table.trading-options input[type="text"] {
+    max-width: 45vw;
+  }
+  section#trade-entry h2 {
+    font-size: 4vw;
+  }
+  section#trade-entry table.trading-options h2 {
+    font-size: 4vw;
+  }
+  section#trade-entry table.trading-options h2#currency-market-price {
+    font-size: 6vw;
+  }
+  section#trade-entry table.trading-wallet h2 {
+    font-size: 5vw;
+  }
+  section#trade-entry div#BUY button.trading-title,
+  section#trade-entry div#SELL button.trading-title {
+    font-size: 8vw;
+    flex: unset;
+  }
+  table.trade-entry thead td,
+  table.trade-entry tbody td,
+  table.trade-entry tfoot td {
+    height: 28px;
+    font-size: 4vw;
+    padding: 8px 10px 8px;
+    white-space: nowrap;
+    border-spacing: 0;
+  }
+  table.trade-entry thead th,
+  table.trade-entry tfoot td {
+    font-size: 4vw;
+  }
+  section#trade-entry .trading-area .trading-toggle-plus-icon,
+  section#trade-entry .trading-area .trading-toggle-minus-icon {
+    font-size: 7vw;
+    padding-left: 2vw;
+  }
+  section#trade-entry .trading-area .trading-toggle-minus-icon {
+    padding-left: 4vw;
+  }
+}
+@media screen and (min-width: 601px) {
+  .txt_loading {
+    font-size: 2.5vw;
+  }
+  section#currency-data {
+    font-size: 4vw;
+  }
+  section#currency-data .total-balance {
+    font-size: 4.5vw;
+  }
+  section#wallets td.column-heading {
+    font-size: 2.5vw;
+  }
+  section#wallets td.asset_dollars {
+    padding-right: 30px;
+  }
+  table#markets tr {
+    line-height: 30px;
+  }
+  table#wallet-details tr {
+    line-height: 15px;
+  }
+  table#wallet-details td.math-sign {
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+  }
+  table#markets td,
+  table#wallet-details td {
+    padding: 8px;
+    vertical-align: baseline;
+  }
+  table#wallet-details td {
+    padding: 16px 10px;
+  }
+  section#trades .chkbox_label,
+  section#orders .chkbox_label,
+  section#executions .chkbox_label {
+    font-size: 22px;
+  }
+  section#orders input.show-currency,
+  section#executions input.show-currency {
+    width: 14px;
+    height: 14px;
+  }
+  section#orders div.order-btn-group button {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  table.trades button.delete-me {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  ul.error-area {
+    width: 570px;
+  }
+  table.trade-entry button.delete-me {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  table.trading-wallet .label,
+  table.trading-wallet h2 {
+    font-size: 25px;
+  }
+  section#trade-entry table.trade-entry tr {
+    line-height: 22px;
+  }
+  section#trade-entry table.trading-options h2#currency-market-price {
+    font-size: 4.5vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  nav .nav-link {
+    font-size: 24px;
+  }
+  div.price-ticker-wrapper {
+    height: 28px;
+  }
+  ul.error-area {
+    width: 600px;
+  }
+  .txt_loading {
+    margin-top: 40px;
+    font-size: 25px;
+  }
+  section#wallets section#total-balance table#total-balance-amount {
+    min-height: 72px;
+  }
+  section#currency-data .total-balance {
+    font-size: 36px;
+  }
+  section#currency-data span.total-balance {
+    font-size: 30px;
+  }
+  section#currency-data {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  section#currency-data div#call-counter {
+    font-size: 20px;
+    padding-left: 40px;
+  }
+  section#currency-data td.column-heading {
+    font-size: 16px;
+  }
+  section#currency-data td.asset_amount {
+    font-size: 22px;
+    padding-top: 20px;
+  }
+  section#markets .time-now {
+    font-size: 24px;
+  }
+  table#executions .executions-order {
+    display: table-cell;
+  }
+  table.trades td {
+    padding: 10px;
+  }
+  table.trades thead td,
+  table.trades tfoot td {
+    font-size: 22px;
+  }
+  table.trades thead th {
+    font-size: 20px;
+  }
+  table.trades td.asset-price {
+    width: 75px;
+  }
+  section#trade-entry table.trading-options h2#currency-market-price {
+    font-size: 30px;
+  }
+  section#trade-entry div#BUY button.trading-title,
+  section#trade-entry div#SELL button.trading-title {
+    font-size: 32px;
+  }
+  table.trade-entry tbody td {
+    padding: 10px;
+  }
+  table.trade-entry tbody td,
+  table.trades tbody td {
+    font-size: 20px;
+  }
+  table.trade-entry thead td,
+  table.trade-entry tfoot td {
+    font-size: 22px;
+  }
+  table.trade-entry thead th {
+    font-size: 20px;
+  }
+  .limit-btn-group button {
+    font-size: 16px;
+    padding: 3px 10px;
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 940px) {
+  div.price-ticker-wrapper {
+    height: 8px;
+  }
+  div.price-ticker-wrapper .price-ticker {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: visible;
+  }
+  table#markets tr {
+    line-height: 38px;
+  }
+  table#wallet tr {
+    line-height: 44px;
+  }
+  section#currency-data {
+    display: flex;
+    justify-content: center;
+  }
+  section#markets {
+    padding-top: 105px;
+    padding-right: 24px;
+  }
+  section#total-balance {
+    padding-right: 220px;
+  }
+  section#wallets span.currency {
+    display: none;
+  }
+  section#currency-data td.all-assets {
+    visibility: hidden;
+  }
+  section#wallets table#wallet-details td.asset_dollars {
+    padding-right: 36px;
+  }
+  section#markets .time-now {
+    font-size: 22px;
+  }
+  div#call-counter {
+    text-align: left;
+  }
+  div#total-balance-amount {
+    padding-bottom: 32px;
+  }
+  table.trades td.asset-price {
+    width: 90px;
+  }
+  table.trades span.narrow-only {
+    display: none;
+  }
+  table#executions .executions-rebate {
+    display: table-cell;
+  }
+  table#orders .orders-order {
+    display: table-cell;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section#orders span.multi-order-name {
+    display: none;
+  }
+}

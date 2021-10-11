@@ -1,0 +1,30 @@
+version: "3"
+services:
+  chrome:
+    build:
+      context: .
+      dockerfile: Dockerfile.chrome
+    ports:
+      - 4444:4444
+    logging:
+      driver: "none"
+  tests:
+    build: .
+    environment:
+      ola_base_url: ${ola_base_url}
+      activity_center_base_url: ${activity_center_base_url}
+      account_settings_url: ${account_settings_url}
+      ols_base_url: ${ols_base_url}
+      atlas_office_url: ${atlas_office_url}
+      onwld_base_url: ${onwld_base_url}
+      REMOTE_BROWSER: ${REMOTE_BROWSER}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_REGION: ${AWS_REGION}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+    command: /bin/bash run.sh
+    volumes:
+      - .:/tests
+    depends_on:
+      - chrome
+    links:
+      - chrome

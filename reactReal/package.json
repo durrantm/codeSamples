@@ -1,0 +1,67 @@
+{
+  "name": "paxos-ats",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.5",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "axios": "^0.21.1",
+    "core-js": "^3.15.2",
+    "dayjs": "^1.10.4",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-scss": "^3.19.0",
+    "typescript": "^4.3.4",
+    "uuid": "^8.3.2",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "eslint src/ && stylelint src/ && react-scripts start",
+    "start:offline": "REACT_APP_OFFLINE_MODE=true npm start",
+    "start:offline:windows": "set REACT_APP_OFFLINE_MODE=true && npm start",
+    "start:local": "REACT_APP_LOCAL_MODE=true npm start",
+    "start:local:windows": "set REACT_APP_LOCAL_MODE=true && npm start",
+    "build": "react-scripts build",
+    "test": "eslint src/ && stylelint src/ && react-scripts test *",
+    "test:coverage": "react-scripts test * --coverage --collectCoverageFrom=src/**/* --collectCoverageFrom=!src/mocked-data/* --collectCoverageFrom=!src/reportWebVitals.js",
+    "test:backend": "cd ../paxos_trader_be && npm test",
+    "test:all": "npm run test:backend && npm test",
+    "eject": "react-scripts eject",
+    "lintfix": "eslint src/ --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie >= 9"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "IE 11"
+    ]
+  },
+  "devDependencies": {
+    "paxos_mock_data": "file:../paxos_mock_data",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
+  }
+}

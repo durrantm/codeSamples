@@ -1,0 +1,10 @@
+.vs
+.DS_Store
+.swp
+ruby-build
+.idea/
+debug.log
+browserstack.config.yml
+local.log
+qa3_status.html
+run_results.txt

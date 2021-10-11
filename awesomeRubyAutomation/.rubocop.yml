@@ -1,0 +1,18 @@
+AllCops:
+  DisabledByDefault: true
+  Exclude:
+  - "spec/support/ola/aws/**/*"
+  - "spec/support/api_calls/**"
+
+Layout:
+  Enabled: true
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 120
+  Exclude:
+    - "spec/activity_center/api_calls/**"
+    - "spec/support/api_calls/**"
+
+Security/Eval:
+  Enabled: true

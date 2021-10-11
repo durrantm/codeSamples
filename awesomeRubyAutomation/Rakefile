@@ -1,0 +1,5 @@
+task default: %w[hook]
+
+task :hook do
+	sh "git config core.hooksPath hooks"
+end
